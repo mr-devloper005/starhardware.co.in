@@ -34,23 +34,23 @@ export function EditableContactLeadForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="mt-6 rounded-sm border border-[var(--editable-border)] bg-[var(--slot4-panel-bg)] p-6 md:p-8">
-      <div className="grid gap-4 md:grid-cols-2">
+    <form onSubmit={handleSubmit} className="mt-6 max-w-full overflow-hidden rounded-sm border border-[var(--editable-border)] bg-[var(--slot4-panel-bg)] p-5 sm:p-6 lg:p-8">
+      <div className="grid min-w-0 gap-4 xl:grid-cols-2">
         <Field name="name" label="Full name" placeholder="Your name" required />
         <Field name="email" type="email" label="Email address" placeholder="you@example.com" required />
       </div>
-      <div className="mt-4 grid gap-4 md:grid-cols-2">
+      <div className="mt-4 grid min-w-0 gap-4 xl:grid-cols-2">
         <Field name="phone" label="Phone number" placeholder="Optional" />
         <Field name="subject" label="Subject" placeholder="How can we help?" />
       </div>
-      <label className="mt-4 grid gap-2 text-sm font-semibold text-[var(--slot4-muted-text)]">
+      <label className="mt-4 grid min-w-0 gap-2 text-sm font-semibold text-[var(--slot4-muted-text)]">
         Message
         <textarea
           name="message"
           required
           rows={6}
           placeholder="Tell us what you need help with..."
-          className="rounded-sm border border-[var(--editable-border)] bg-[var(--slot4-surface-bg)] px-4 py-3 text-base font-medium text-[var(--slot4-page-text)] outline-none transition placeholder:text-[var(--slot4-soft-muted-text)] focus:border-[var(--slot4-accent)]"
+          className="min-w-0 max-w-full rounded-sm border border-[var(--editable-border)] bg-[var(--slot4-surface-bg)] px-4 py-3 text-base font-medium text-[var(--slot4-page-text)] outline-none transition placeholder:text-[var(--slot4-soft-muted-text)] focus:border-[var(--slot4-accent)]"
         />
       </label>
       <input name="company" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" />
@@ -74,14 +74,14 @@ export function EditableContactLeadForm() {
 
 function Field({ name, label, type = 'text', placeholder, required = false }: { name: string; label: string; type?: string; placeholder?: string; required?: boolean }) {
   return (
-    <label className="grid gap-2 text-sm font-semibold text-[var(--slot4-muted-text)]">
+    <label className="grid min-w-0 gap-2 text-sm font-semibold text-[var(--slot4-muted-text)]">
       {label}
       <input
         name={name}
         type={type}
         required={required}
         placeholder={placeholder}
-        className="h-12 rounded-sm border border-[var(--editable-border)] bg-[var(--slot4-surface-bg)] px-4 text-base font-medium text-[var(--slot4-page-text)] outline-none transition placeholder:text-[var(--slot4-soft-muted-text)] focus:border-[var(--slot4-accent)]"
+        className="h-12 min-w-0 max-w-full rounded-sm border border-[var(--editable-border)] bg-[var(--slot4-surface-bg)] px-4 text-base font-medium text-[var(--slot4-page-text)] outline-none transition placeholder:text-[var(--slot4-soft-muted-text)] focus:border-[var(--slot4-accent)]"
       />
     </label>
   )

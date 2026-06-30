@@ -3,48 +3,47 @@ import { slot4BrandConfig } from '@/editable/theme/brand.config'
 export const globalContent = {
   site: {
     name: slot4BrandConfig.siteName,
-    tagline: slot4BrandConfig.tagline || 'Independent reading platform',
+    tagline: slot4BrandConfig.tagline || 'Premium hardware resources & guides',
     domain: slot4BrandConfig.domain,
     baseUrl: slot4BrandConfig.baseUrl,
   },
   nav: {
-    tagline: 'Independent reading platform',
+    tagline: 'Hardware resources & guides',
     primaryLinks: [
-      { label: 'Articles', href: '/articles' },
-      { label: 'Visuals', href: '/image-sharing' },
-      { label: 'Listings', href: '/listings' },
+      { label: 'Resources', href: '/sbm' },
+      { label: 'About', href: '/about' },
       { label: 'Contact', href: '/contact' },
     ],
     actions: {
-      primary: { label: 'Start exploring', href: '/' },
-      secondary: { label: 'Submit', href: '/contact' },
+      primary: { label: 'Browse Resources', href: '/sbm' },
+      secondary: { label: 'Contact', href: '/contact' },
     },
   },
   footer: {
-    tagline: 'Stories, resources, and discoverable posts',
-    description: 'A connected publishing surface for articles, visuals, listings, profiles, bookmarks, and downloadable resources.',
+    tagline: 'Tools, guides, and supplier resources for hardware professionals.',
+    description: 'Your go-to platform for curated hardware resources, product guides, supplier directories, and industry insights — all in one place.',
+    email: 'hello@starhardware.co.in',
     columns: [
       {
         title: 'Explore',
         links: [
-          { label: 'Articles', href: '/articles' },
-          { label: 'Listings', href: '/listings' },
-          { label: 'Images', href: '/image-sharing' },
-          { label: 'PDF Library', href: '/pdf' },
+          { label: 'Resources', href: '/sbm' },
+          { label: 'Search', href: '/search' },
+          { label: 'About', href: '/about' },
         ],
       },
       {
-        title: 'Site',
+        title: 'Company',
         links: [
-          { label: 'About', href: '/about' },
           { label: 'Contact', href: '/contact' },
+          { label: 'Submit', href: '/create' },
         ],
       },
     ],
-    bottomNote: 'Built for clean discovery and connected publishing.',
+    bottomNote: 'Built for hardware professionals and enthusiasts.',
   },
   commonLabels: {
-    readMore: 'Read more',
+    readMore: 'View resource',
     viewAll: 'View all',
     explore: 'Explore',
     latest: 'Latest',
